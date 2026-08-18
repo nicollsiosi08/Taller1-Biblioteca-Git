@@ -33,4 +33,14 @@ public class Main {
         clientes.add(nuevoCliente);
         System.out.println("¡Cliente registrado con éxito!");
     }
+      public static void listarClientes() {
+        System.out.println("\n--- LISTA DE CLIENTES ---");
+        if (clientes.isEmpty()) {
+            System.out.println("No hay clientes registrados en el sistema.");
+            return;
+        }
+        for (Cliente c : clientes) {
+            System.out.println("ID: " + c.getId() + " | Nombre: " + c.getNombre() + " | Teléfono: " + c.getTelefono() + " | Email: " + c.getEmail());
+        }
+    }
 }
