@@ -43,4 +43,21 @@ public class Main {
             System.out.println("ID: " + c.getId() + " | Nombre: " + c.getNombre() + " | Teléfono: " + c.getTelefono() + " | Email: " + c.getEmail());
         }
     }
+        public static void buscarCliente() {
+        System.out.println("\n--- BUSCAR CLIENTE ---");
+        System.out.print("Ingrese el ID del cliente a buscar: ");
+        String idBusqueda = sc.nextLine();
+
+        for (Cliente c : clientes) {
+            if (c.getId().equals(idBusqueda)) {
+                System.out.println("¡Cliente Encontrado!");
+                System.out.println("ID: " + c.getId());
+                System.out.println("Nombre: " + c.getNombre());
+                System.out.println("Teléfono: " + c.getTelefono());
+                System.out.println("Email: " + c.getEmail());
+                return;
+            }
+        }
+        System.out.println("Cliente no encontrado.");
+    }
 }
